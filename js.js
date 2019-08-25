@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     var inp_bez = document.querySelector(".bezokolicznik");
-    var btn_bez = document.querySelector(".btn_bez");
+    var btn_bez = document.querySelector(".btn_bez_los");
+    var btn_bez_spr = document.querySelector(".btn_bez_spr");
     var inp_tlu = document.querySelector(".tlumaczenie");
     var div_bez = document.querySelector(".div_bez");
     var div_tlu = document.querySelector(".div_tlu");
@@ -20,12 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var l23 = document.querySelector(".l23");
 
 
-    var inp_bez_val = inp_bez.value;
+    // var inp_bez_val = inp_bez.value;
     var czasowniki = [
         ["amier", "kochać", "j'aime", "tu aimes", "il aime", "nous aimons", "vous aimez", "ils aiment"],
-        ["aller", "iść", "je vais", "tu vas", "il va", "	nous allons", "vous allez", "ils vont"],
+        ["aller", "iść", "je vais", "tu vas", "il va", "	nous allons", "vous allez", "ils vont"]
 
-            ["kurwa", "mac"]
+
     ]
     //     {
     //        amier:{
@@ -38,11 +39,22 @@ document.addEventListener("DOMContentLoaded", function () {
     //     //
     //     // }
     // ];
-    btn_bez.addEventListener('click', function (e) {
-        e.preventDefault();
 
-        for (var i = 0; i < czasowniki.length; i++) {
-            if (inp_bez.value === czasowniki[i][0]) {
+
+    var i = Math.floor((Math.random() * czasowniki.length) + 0);
+        // for (var i = 0; i < czasowniki.length; i++) {
+        //     if (inp_bez.value === czasowniki[i][0]) {
+        div_bez.removeChild(div_bez.lastChild);
+        var newOpt = document.createElement(`h2`);
+        newOpt.innerHTML = `${czasowniki[i][0]}`;
+        // newOpt.style.fontSize="5rem";
+        //newOpt.classList.add("dobre_tlu")
+        div_bez.appendChild(newOpt);
+
+
+btn_bez_spr.addEventListener('click',function () {
+
+
                 if (inp_tlu.value === czasowniki[i][1]) {
                     div_tlu.removeChild(div_tlu.lastChild);
                     var newTrue = document.createElement(`p`);
@@ -50,11 +62,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     newTrue.classList.add("dobre_tlu")
                     div_tlu.appendChild(newTrue);
 
-                    div_bez.removeChild(div_bez.lastChild);
-                    let newTruee = document.createElement(`p`);
-                    newTruee.innerText = "dobre tłumaczenie";
-                    newTruee.classList.add("dobre_tlu");
-                    div_bez.appendChild(newTruee);
+                    // div_bez.removeChild(div_bez.lastChild);
+                    // let newTruee = document.createElement(`p`);
+                    // newTruee.innerText = "dobre tłumaczenie";
+                    // newTruee.classList.add("dobre_tlu");
+                    // div_bez.appendChild(newTruee);
                 } else {
                     div_tlu.removeChild(div_tlu.lastChild);
                     var newOption = document.createElement(`p`);
@@ -62,11 +74,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     newOption.classList.add("zle_tlu");
                     div_tlu.appendChild(newOption);
 
-                    div_bez.removeChild(div_bez.lastChild);
-                    let newTrue = document.createElement(`p`);
-                    newTrue.innerText = "dobre tłumaczenie";
-                    newTrue.classList.add("dobre_tlu")
-                    div_bez.appendChild(newTrue);
+                    // div_bez.removeChild(div_bez.lastChild);
+                    // let newTrue = document.createElement(`p`);
+                    // newTrue.innerText = "dobre tłumaczenie";
+                    // newTrue.classList.add("dobre_tlu")
+                    // div_bez.appendChild(newTrue);
                 }
                 if (l1.value === czasowniki[i][2]) {
                     div_1.removeChild(div_1.lastChild);
@@ -152,9 +164,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     newTrue.classList.add("zle_tlu")
                     div_23.appendChild(newTrue);
                 }
+})
 
 
-            }
             // else{
             //     div_bez.removeChild(div_bez.lastChild);
             //     let newTrue = document.createElement(`p`);
@@ -165,10 +177,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // }
 
 
-        }
+       // }
 
 
-    })
+   // })
 
 
 })

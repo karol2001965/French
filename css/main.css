@@ -1,9 +1,117 @@
+* {
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+.all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+b {
+  text-align: center;
+}
+
 .zle_tlu {
   color: red;
 }
 
 .dobre_tlu {
   color: green;
+}
+
+.div_bez {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+.pierwszy_rzad, .drugi_rzad, .trzeci_rzad, .czwarty_rzad {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3rem;
+}
+
+.pierwszy_rzad {
+  background-color: #FFDD5C;
+}
+
+.drugi_rzad {
+  background-color: #76A665;
+}
+
+.trzeci_rzad {
+  background-color: #227066;
+}
+
+.czwarty_rzad {
+  background-color: #265961;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+
+input {
+  width: 10rem;
+  margin-top: 1rem;
+}
+
+button {
+  background-color: #214154;
+  width: 7rem;
+  height: 3rem;
+  border-radius: 50px;
+  border: 0;
+}
+
+.but_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
