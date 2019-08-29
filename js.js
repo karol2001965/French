@@ -23,8 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // var inp_bez_val = inp_bez.value;
     var czasowniki = [
+
+
+
+
+        
         ["amier", "kochać", "j'aime", "tu aimes", "il aime", "nous aimons", "vous aimez", "ils aiment"],
         ["aller", "iść", "je vais", "tu vas", "il va", "	nous allons", "vous allez", "ils vont"]
+
+
 
 
     ]
@@ -50,11 +57,15 @@ document.addEventListener("DOMContentLoaded", function () {
         // newOpt.style.fontSize="5rem";
         //newOpt.classList.add("dobre_tlu")
         div_bez.appendChild(newOpt);
+    czasowniki[i][1][0].toUpperCase()
 
 
 btn_bez_spr.addEventListener('click',function () {
 
 
+
+
+    console.log(czasowniki[i][1]);
                 if (inp_tlu.value === czasowniki[i][1]) {
                     div_tlu.removeChild(div_tlu.lastChild);
                     var newTrue = document.createElement(`p`);
