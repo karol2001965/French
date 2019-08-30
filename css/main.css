@@ -53,19 +53,18 @@ b {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30%;
+  width: 37%;
 }
 
 .pierwszy_rzad, .drugi_rzad, .trzeci_rzad, .czwarty_rzad {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 19vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3rem;
+  height: 7vh;
 }
 
 .pierwszy_rzad {
