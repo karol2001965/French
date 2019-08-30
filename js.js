@@ -29,12 +29,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
         
         ["amier", "kochać", "j'aime", "tu aimes", "il aime", "nous aimons", "vous aimez", "ils aiment"],
-        ["aller", "iść", "je vais", "tu vas", "il va", "	nous allons", "vous allez", "ils vont"]
+        ["aller", "iść", "je vais", "tu vas", "il va", "nous allons", "vous allez", "ils vont"]
 
 
 
 
     ]
+
+    const capitalize = (s) => {
+
+        return s.charAt(0).toLowerCase() + s.slice(1)
+    }
+  for ( let i=0 ; i<czasowniki.length;i++) {
+  for ( let j=0 ; j<czasowniki[0].length;j++) {
+
+
+      console.log(capitalize(czasowniki[i][j]));
+  }
+  }
+
+
+
+
     //     {
     //        amier:{
     //            tlumaczenie:"kochac"
@@ -66,7 +82,7 @@ btn_bez_spr.addEventListener('click',function () {
 
 
     console.log(czasowniki[i][1]);
-                if (inp_tlu.value === czasowniki[i][1]) {
+                if (capitalize(inp_tlu.value) === czasowniki[i][1]) {
                     div_tlu.removeChild(div_tlu.lastChild);
                     var newTrue = document.createElement(`p`);
                     newTrue.innerText = "dobre tłumaczenie";
@@ -91,7 +107,7 @@ btn_bez_spr.addEventListener('click',function () {
                     // newTrue.classList.add("dobre_tlu")
                     // div_bez.appendChild(newTrue);
                 }
-                if (l1.value === czasowniki[i][2]) {
+                if (capitalize(l1.value) === czasowniki[i][2]) {
                     div_1.removeChild(div_1.lastChild);
                     let newTrue = document.createElement(`p`);
                     newTrue.innerText = "dobre tłumaczenie";
@@ -106,7 +122,7 @@ btn_bez_spr.addEventListener('click',function () {
                 }
 
 
-                if (l2.value === czasowniki[i][3]) {
+                if (capitalize(l2.value) === czasowniki[i][3]) {
                     div_2.removeChild(div_2.lastChild);
                     let newTrue = document.createElement(`p`);
                     newTrue.innerText = "dobre tłumaczenie";
@@ -120,7 +136,7 @@ btn_bez_spr.addEventListener('click',function () {
                     div_2.appendChild(newTrue);
                 }
 
-                if (l3.value === czasowniki[i][4]) {
+                if (capitalize(l3.value) === czasowniki[i][4]) {
                     div_3.removeChild(div_3.lastChild);
                     let newTrue = document.createElement(`p`);
                     newTrue.innerText = "dobre tłumaczenie";
@@ -134,7 +150,7 @@ btn_bez_spr.addEventListener('click',function () {
                     div_3.appendChild(newTrue);
                 }
 
-                if (l21.value === czasowniki[i][5]) {
+                if (capitalize(l21.value) === czasowniki[i][5]) {
                     div_21.removeChild(div_21.lastChild);
                     let newTrue = document.createElement(`p`);
                     newTrue.innerText = "dobre tłumaczenie";
@@ -148,7 +164,7 @@ btn_bez_spr.addEventListener('click',function () {
                     div_21.appendChild(newTrue);
                 }
 
-                if (l22.value === czasowniki[i][6]) {
+                if (capitalize(l22.value) === czasowniki[i][6]) {
                     div_22.removeChild(div_22.lastChild);
                     let newTrue = document.createElement(`p`);
                     newTrue.innerText = "dobre tłumaczenie";
@@ -162,7 +178,7 @@ btn_bez_spr.addEventListener('click',function () {
                     div_22.appendChild(newTrue);
                 }
 
-                if (l23.value === czasowniki[i][7]) {
+                if (capitalize(l23.value) === czasowniki[i][7]) {
                     div_23.removeChild(div_23.lastChild);
                     let newTrue = document.createElement(`p`);
                     newTrue.innerText = "dobre tłumaczenie";
