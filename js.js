@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var div_23 = document.querySelector(".div_23");
     var l23 = document.querySelector(".l23");
     var pop=document.querySelector(".btn_bez_pop");
+    var osoba1=document.querySelector(".osoba1");
+    var osoba2=document.querySelector(".osoba2");
+    var osoba3=document.querySelector(".osoba3");
+    var osoba4=document.querySelector(".osoba4");
+    var osoba5=document.querySelector(".osoba5");
+    var osoba6=document.querySelector(".osoba6");
 
 
     // var inp_bez_val = inp_bez.value;
@@ -34,102 +40,122 @@ document.addEventListener("DOMContentLoaded", function () {
         //
 
 
-        ["aimer", "kochać", "j'aime", "tu aimes", "il aime", "nous aimons", "vous aimez", "ils aiment"],
-        ["aller", "iść", "je vais", "tu vas", "il va", "nous allons", "vous allez", "ils vont"],
-        ["attendre", "czekać", "j'attends", "tu attends", "il attend", "nous attendons", "vous attendez", "ils attendent"],
-        ["avoir", "mieć", "j'ai", "tu as", "il a", "nous avons", "vous avez", "ils ont"],
-        ["boire", "pić", "je bois", "tu bois", "il boit", "nous buvons", "vous buvez", "ils boivent"],
-        ["chanter", "śpiewać", "je chante", "tu chantes", "il chante", "nous chantons", "vous chantez", "ils chantent"],
-        ["chercher", "szukać", "je cherche", "tu cherches", "il cherche", "nous cherchons", "vous cherchez", "ils cherchent"],
-        ["choisir", "wybierać", "je choisis", "tu choisis", "il choisit", "nous choisissons", "vous choisissez", "ils choisissent"],
-        ["commencer", "zaczynać", "je commence", "tu commences", "il commence", "nous commençons", "vous commencez", "ils commencent"],
-        ["conduire", "kierować", "je conduis", "tu conduis", "il conduit", "nous conduisons", "vous conduisez", "ils conduisent"],
-        ["connaître", "znać", "je connais", "tu connais", "il connaît", "nous connaissons", "vous connaissez", "ils connaissent"],
-        ["corriger", "poprawiać", "je corrige", "tu corriges", "il corrige", "nous corrigeons", "vous corrigez", "ils corrigent"],
-        ["coudre", "szyć", "je couds", "tu couds", "il coud", "nous cousons", "vous cousez", "ils cousent"],
-        ["critiquer", "krytykować", "je critique", "tu critiques", "il critique", "nous critiquons", "vous critiquez", "ils critiquent"],
-        ["croire", "wierzyć", "je crois", "tu crois", "il croit", "nous croyons", "vous croyez", "ils croient"],
-        ["cuire", "gotować", "je cuis", "tu cuis", "il cuit", "nous cuisons", "vous cuisez", "ils cuisent"],
-        ["décider", "decydować", "je décide", "tu décides", "il décide", "nous décidons", "vous décidez", "ils décident"],
-        ["devoir", "musieć", "je dois", "tu dois", "il doit", "nous devons", "vous devez", "ils doivent"],
-        ["dire", "powiedzieć", "je dis", "tu dis", "il dit", "nous disons", "vous dites", "ils disent"],
-        ["donner", "dać", "je donne", "tu donnes", "il donne", "nous donnons", "vous donnez", "ils donnent"],
-        ["dormir", "spać", "je dors", "tu dors", "il dort", "nous dormons", "vous dormez", "ils dorment"],
-        ["écouter", "słuchać", "j'écoute", "tu écoutes", "il écoute", "nous écoutons", "vous écoutez", "ils écoutent"],
-        ["écrire", "pisać", "j'écris", "tu écris", "il écrit", "nous écrivons", "vous écrivez", "ils écrivent"],
-        ["embrasser", "przytulać", "j'embrasse", "tu embrasses", "il embrasse", "nous embrassons", "vous embrassez", "ils embrassent"],
-        ["empirer", "pogarszać", "j'empire", "tu empires", "il empire", "nous empirons", "vous empirez", "ils empirent"],
-        ["entendre", "słyszeć", "j'entends", "tu entends", "il entend", "nous entendons", "vous entendez", "ils entendent"],
-        ["être", "być", "je suis", "tu es", "il est", "nous sommes", "vous êtes", "ils sont"],
-        ["être assis", "siedzieć", "je suis assis", "tu es assis", "il est assis", "nous sommes assis", "vous êtes assis", "ils sont assis"],
-        ["étudier", "studiować", "j'étudie", "tuétudies", "ilétudie", "nousétudions", "vousétudiez", "ilsétudient"],
-        ["faire", "robić", "je fais", "tu fais", "il fait", "nous faisons", "vous faites", "ils font"],
-        ["fermer", "zamykać", "je ferme", "tu fermes", "il ferme", "nous fermons", "vous fermez", "ils ferment"],
-        ["finir", "kończyć", "je finis", "tu finis", "il finit", "nous finissons", "vous finissez", "ils finissent"],
-        ["gagner", "wygrać", "je gagne", "tu gagnes", "il gagne", "nous gagnons", "vous gagnez", "ils gagnent"],
-        ["habiter", "mieszkać", "j'habite", "tu habites", "il habite", "nous habitons", "vous habitez", "ils habitent"],
-        ["interroger", "pytać", "j'interroge", "tu interroges", "il interroge", "nous interrogeons", "vous interrogez", "ils interrogent"],
-        ["jouer", "grać", "je joue", "tu joues", "il joue", "nous jouons", "vous jouez", "ils jouent"],
-        ["laisser", "zostawiać", "je laisse", "tu laisses", "il laisse", "nous laissons", "vous laissez", "ils laissent"],
-        ["laver", "myć", "je lave", "tu laves", "il lave", "nous lavons", "vous lavez", "ils lavent"],
-        ["lire", "czytać", "je lis", "tu lis", "il lit", "nous lisons", "vous lisez", "ils lisent"],
-        ["manger", "jeść", "je mange", "tu manges", "il mange", "nous mangeons", "vous mangez", "ils mangent"],
-        ["mentir", "kłamać", "je mens", "tu mens", "il ment", "nous mentons", "vous mentez", "ils mentent"],
-        ["mourir", "umierać", "je meurs", "tu meurs", "il meurt", "nous mourons", "vous mourez", "ils meurent"],
-        ["nager", "pływać", "je nage", "tu nages", "il nage", "nous nageons", "vous nagez", "ils nagent"],
-        ["oublier", "zapomnieć", "j'oublie", "tu oublies", "il oublie", "nous oublions", "vous oubliez", "ils oublient"],
-        ["oublier", "zapomnieć", "j'oublie", "tu oublies", "il oublie", "nous oublions", "vous oubliez", "ils oublient"],
-        ["ouvrir", "otwierać", "j'ouvre", "tu ouvres", "il ouvre", "nous ouvrons", "vous ouvrez", "ils ouvrent"],
-        ["parler", "mówić", "je parle", "tu parles", "il parle", "nous parlons", "vous parlez", "ils parlent"],
-        ["payer", "płacić", "je paie", "tu paies", "il paie", "nous payons", "vous payez", "ils paient"],
-        ["penser", "myśleć", "je pense", "tu penses", "il pense", "nous pensons", "vous pensez", "ils pensent"],
-        ["permettre", "pozwalać", "je permets", "tu permets", "il permet", "nous permettons", "vous permettez", "ils permettent"],
-        ["plaire", "lubić", "je plais", "tu plais", "il plaît", "nous plaisons", "vous plaisez", "ils plaisent"],
-        ["pleurer", "płakać", "je pleure", "tu pleures", "il pleure", "nous pleurons", "vous pleurez", "ils pleurent"],
-        ["poser", "kłaść", "je pose", "tu poses", "il pose", "nous posons", "vous posez", "ils posent"],
-        ["pousser", "pchać", "je pousse", "tu pousses", "il pousse", "nous poussons", "vous poussez", "ils poussent"],
-        ["pouvoir", "móc", "je peux", "tu peux", "il peut", "nous pouvons", "vous pouvez", "ils peuvent"],
-        ["prendre", "brać", "je prends", "tu prends", "il prend", "nous prenons", "vous prenez", "ils prennent"],
-        ["prier", "prosić", "je prie", "tu pries", "il prie", "nous prions", "vous priez", "ils prient"],
-        ["produire", "produkować", "je produis", "tu produis", "il produit", "nous produisons", "vous produisez", "ils produisent"],
-        ["regarder", "patrzeć", "je regarde", "tu regardes", "il regarde", "nous regardons", "vous regardez", "ils regardent"],
-        ["remercier", "dziękować", "je remercie", "tu remercies", "il remercie", "nous remercions", "vous remerciez", "ils remercient"],
-        ["rester", "pozostać", "je reste", "tu restes", "il reste", "nous restons", "vous restez", "ils restent"],
-        ["rester", "pozostawać", "je reste", "tu restes", "il reste", "nous restons", "vous restez", "ils restent"],
-        ["rêver", "śnić", "je rêve", "tu rêves", "il rêve", "nous rêvons", "vous rêvez", "ils rêvent"],
-        ["s'amuser", "bawić się", "je m'amuse", "tu t'amuses", "il s'amus", "nous nous amusons", "vous amusez", "ils samusent"],
-        ["savoir", "wiedzieć", "je sais", "tu sais", "il sait", "nous savons", "vous savez", "ils savent"],
-        ["se réjouir", "cieszyć się", "je me réjouis", "tu te réjouis", "il se réjouit", "nous nous réjouissons", "vous réjouissez", "ils réjouissent"],
-        ["se souvenir", "pamiętać", "je me souviens", "tu te souviens", "il se souvien", "nous nous souvenons", "vous souvenez", "ils souviennent"],
-        ["sentir", "czuć", "je sens", "tu sens", "il sent", "nous sentons", "vous sentez", "ils sentent"],
-        ["signer", "podpisać", "je signe", "tu signes", "il signe", "nous signons", "vous signez", "ils signent"],
-        ["signifier", "znaczyć", "je signifie", "tu signifies", "il signifie", "nous signifions", "vous signifiez", "ils signifient"],
-        ["sortir", "wychodzić", "je sors", "tu sors", "il sort", "nous sortons", "vous sortez", "ils sortent"],
-        ["souffrir", "cierpieć", "je souffre", "tu souffres", "il souffre", "nous souffrons", "vous souffrez", "ils souffrent"],
-        ["sourire", "uśmiechać się", "je souris", "tu souris", "il sourit", "nous sourions", "vous souriez", "ils sourient"],
-        ["tenir", "trzymać", "je tiens", "tu tiens", "il tient", "nous tenons", "vous tenez", "ils tiennent"],
-        ["tirer", "ciągnąć", "je tire", "tu tires", "il tire", "nous tirons", "vous tirez", "ils tirent"],
-        ["tomber", "upadać", "je tombe", "tu tombes", "il tombe", "nous tombons", "vous tombez", "ils tombent"],
-        ["traduire", "tłumaczyć", "je traduis", "tu traduis", "il traduit", "nous traduisons", "vous traduisez", "ils traduisent"],
-        ["travailler", "pracować", "je travaille", "tu travailles", "il travaille", "nous travaillons", "vous travaillez", "ils travaillent"],
-        ["venir", "przyjść", "je viens", "tu viens", "il vient", "nous venons", "vous venez", "ils viennent"],
-        ["vivre", "żyć", "je vis", "tu vis", "il vit", "nous vivons", "vous vivez", "ils vivent"],
-        ["voir", "zobaczyć", "je vois", "tu vois", "il voit", "nous voyons", "vous voyez", "ils voient"],
-        ["vouloir", "chcieć", "je veux", "tu veux", "il veut", "nous voulons", "vous voulez", "ils veulent"]
 
+        ["aller", "iść", "vais", "vas", "va", "allons", "allez", "vont"],
+        ["boire", "pić", "bois", "bois", "boit", "buvons", "buvez", "boivent"],
+        ["chanter", "śpiewać", "chante", "chantes", "chante", "chantons", "chantez", "chantent"],
+        ["chercher", "szukać", "cherche", "cherches", "cherche", "cherchons", "cherchez", "cherchent"],
+        ["choisir", "wybierać", "choisis", "choisis", "choisit", "choisissons", "choisissez", "choisissent"],
+        ["commencer", "zaczynać", "commence", "commences", "commence", "commençons", "commencez", "commencent"],
+        ["conduire", "kierować", "conduis", "conduis", "conduit", "conduisons", "conduisez", "conduisent"],
+        ["connaître", "znać", "connais", "connais", "connaît", "connaissons", "connaissez", "connaissent"],
+        ["corriger", "poprawiać", "corrige", "corriges", "corrige", "corrigeons", "corrigez", "corrigent"],
+        ["coudre", "szyć", "couds", "couds", "coud", "cousons", "cousez", "cousent"],
+        ["critiquer", "krytykować", "critique", "critiques", "critique", "critiquons", "critiquez", "critiquent"],
+        ["croire", "wierzyć", "crois", "crois", "croit", "croyons", "croyez", "croient"],
+        ["cuire", "gotować", "cuis", "cuis", "cuit", "cuisons", "cuisez", "cuisent"],
+        ["décider", "decydować", "décide", "décides", "décide", "décidons", "décidez", "décident"],
+        ["devoir", "musieć", "dois", "dois", "doit", "devons", "devez", "doivent"],
+        ["dire", "powiedzieć", "dis", "dis", "dit", "disons", "dites", "disent"],
+        ["donner", "dać", "donne", "donnes", "donne", "donnons", "donnez", "donnent"],
+        ["dormir", "spać", "dors", "dors", "dort", "dormons", "dormez", "dorment"],
+        ["être", "być", "suis", "es", "est", "sommes", "êtes", "sont"],
+        ["faire", "robić", "fais", "fais", "fait", "faisons", "faites", "font"],
+        ["fermer", "zamykać", "ferme", "fermes", "ferme", "fermons", "fermez", "ferment"],
+        ["finir", "kończyć", "finis", "finis", "finit", "finissons", "finissez", "finissent"],
+        ["gagner", "wygrać", "gagne", "gagnes", "gagne", "gagnons", "gagnez", "gagnent"],
+        ["jouer", "grać", "joue", "joues", "joue", "jouons", "jouez", "jouent"],
+        ["laisser", "zostawiać", "laisse", "laisses", "laisse", "laissons", "laissez", "laissent"],
+        ["laver", "myć", "lave", "laves", "lave", "lavons", "lavez", "lavent"],
+        ["lire", "czytać", "lis", "lis", "lit", "lisons", "lisez", "lisent"],
+        ["manger", "jeść", "mange", "manges", "mange", "mangeons", "mangez", "mangent"],
+        ["mentir", "kłamać", "mens", "mens", "ment", "mentons", "mentez", "mentent"],
+        ["mourir", "umierać", "meurs", "meurs", "meurt", "mourons", "mourez", "meurent"],
+        ["nager", "pływać", "nage", "nages", "nage", "nageons", "nagez", "nagent"],
+        ["parler", "mówić", "parle", "parles", "parle", "parlons", "parlez", "parlent"],
+        ["payer", "płacić", "paie", "paies", "paie", "payons", "payez", "paient"],
+        ["penser", "myśleć", "pense", "penses", "pense", "pensons", "pensez", "pensent"],
+        ["permettre", "pozwalać", "permets", "permets", "permet", "permettons", "permettez", "permettent"],
+        ["plaire", "lubić", "plais", "plais", "plaît", "plaisons", "plaisez", "plaisent"],
+        ["pleurer", "płakać", "pleure", "pleures", "pleure", "pleurons", "pleurez", "pleurent"],
+        ["poser", "kłaść", "pose", "poses", "pose", "posons", "posez", "posent"],
+        ["pousser", "pchać", "pousse", "pousses", "pousse", "poussons", "poussez", "poussent"],
+        ["pouvoir", "móc", "peux", "peux", "peut", "pouvons", "pouvez", "peuvent"],
+        ["prendre", "brać", "prends", "prends", "prend", "prenons", "prenez", "prennent"],
+        ["prier", "prosić", "prie", "pries", "prie", "prions", "priez", "prient"],
+        ["produire", "produkować", "produis", "produis", "produit", "produisons", "produisez", "produisent"],
+        ["regarder", "patrzeć", "regarde", "regardes", "regarde", "regardons", "regardez", "regardent"],
+        ["remercier", "dziękować", "remercie", "remercies", "remercie", "remercions", "remerciez", "remercient"],
+        ["rester", "pozostać", "reste", "restes", "reste", "restons", "restez", "restent"],
+        ["rester", "pozostawać", "reste", "restes", "reste", "restons", "restez", "restent"],
+        ["rêver", "śnić", "rêve", "rêves", "rêve", "rêvons", "rêvez", "rêvent"],
+        ["savoir", "wiedzieć", "sais", "sais", "sait", "savons", "savez", "savent"],
+        ["sentir", "czuć", "sens", "sens", "sent", "sentons", "sentez", "sentent"],
+        ["signer", "podpisać", "signe", "signes", "signe", "signons", "signez", "signent"],
+        ["signifier", "znaczyć", "signifie", "signifies", "signifie", "signifions", "signifiez", "signifient"],
+        ["sortir", "wychodzić", "sors", "sors", "sort", "sortons", "sortez", "sortent"],
+        ["souffrir", "cierpieć", "souffre", "souffres", "souffre", "souffrons", "souffrez", "souffrent"],
+        ["sourire", "uśmiechać się", "souris", "souris", "sourit", "sourions", "souriez", "sourient"],
+        ["tenir", "trzymać", "tiens", "tiens", "tient", "tenons", "tenez", "tiennent"],
+        ["tirer", "ciągnąć", "tire", "tires", "tire", "tirons", "tirez", "tirent"],
+        ["tomber", "upadać", "tombe", "tombes", "tombe", "tombons", "tombez", "tombent"],
+        ["traduire", "tłumaczyć", "traduis", "traduis", "traduit", "traduisons", "traduisez", "traduisent"],
+        ["travailler", "pracować", "travaille", "travailles", "travaille", "travaillons", "travaillez", "travaillent"],
+        ["venir", "przyjść", "viens", "viens", "vient", "venons", "venez", "viennent"],
+        ["vivre", "żyć", "vis", "vis", "vit", "vivons", "vivez", "vivent"],
+        ["voir", "zobaczyć", "vois", "vois", "voit", "voyons", "voyez", "voient"],
+        ["vouloir", "chcieć", "veux", "veux", "veut", "voulons", "voulez", "veulent"],
+        ["être assis", "siedzieć", "suis assis", "es assis", "est assis", "sommes assis", "êtes assis", "sont assis"],
+
+
+
+
+        ["écouter", "słuchać", "écoute", "écoutes", "écoute", "écoutons", "écoutez", "écoutent"],
+        ["écrire", "pisać", "écris", "écris", "écrit", "écrivons", "écrivez", "écrivent"],
+        ["embrasser", "przytulać", "embrasse", "embrasses", "embrasse", "embrassons", "embrassez", "embrassent"],
+        ["empirer", "pogarszać", "empire", "empires", "empire", "empirons", "empirez", "empirent"],
+        ["entendre", "słyszeć", "entends", "entends", "entend", "entendons", "entendez", "entendent"],
+        ["oublier", "zapomnieć", "oublie", "oublies", "oublie", "oublions", "oubliez", "oublient"],
+        ["oublier", "zapomnieć", "oublie", "oublies", "oublie", "oublions", "oubliez", "oublient"],
+        ["ouvrir", "otwierać", "ouvre", "ouvres", "ouvre", "ouvrons", "ouvrez", "ouvrent"],
+        ["habiter", "mieszkać", "habite", "habites", "habite", "habitons", "habitez", "habitent"],
+        ["interroger", "pytać", "interroge", "interroges", "interroge", "interrogeons", "interrogez", "interrogent"],
+        ["attendre", "czekać", "attends", "attends", "attend", "attendons", "attendez", "attendent"],
+        ["avoir", "mieć", "ai", "as", "a", "avons", "avez", "ont"],
+        ["aimer", "kochać", "aime", "aimes", "aime", "aimons", "aimez", "aiment"],
+        ["étudier", "studiować", "étudie", "étudies", "étudie", "étudions", "étudiez", "étudient"],
+
+
+
+
+
+        ["s'amuser", "bawić się", "m'amuse", "t'amuses", "s'amus", "nous amusons", " amusez", " samusent"],
+        ["se réjouir", "cieszyć się", "me réjouis", "te réjouis", "se réjouit", "nous réjouissons", " réjouissez", " réjouissent"],
+        ["se souvenir", "pamiętać", "me souviens", "te souviens", "se souvien", "nous souvenons", " souvenez", " souviennent"]
 
     ]
-    console.log(czasowniki.length);
+
 
     const capitalize = (s) => {
 
         return s.charAt(0).toLowerCase() + s.slice(1)
     }
+
+
+console.log(czasowniki[81][0]); //63 //77
+
+
+
+
+
+
+
+
     for (let i = 0; i < czasowniki.length; i++) {
         for (let j = 0; j < czasowniki[0].length; j++) {
 
 
-            console.log(capitalize(czasowniki[i][j]));
+
         }
     }
 
@@ -147,7 +173,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // ];
 
 
-    var i = Math.floor((Math.random() * czasowniki.length) + 0);
+     var i = Math.floor((Math.random() * czasowniki.length) + 0);
+
     // for (var i = 0; i < czasowniki.length; i++) {
     //     if (inp_bez.value === czasowniki[i][0]) {
     div_bez.removeChild(div_bez.lastChild);
@@ -159,10 +186,54 @@ document.addEventListener("DOMContentLoaded", function () {
     czasowniki[i][1][0].toUpperCase()
 
 
+    function osoby(osob,before) {
+
+
+        var newTrue = document.createElement(`p`);
+        newTrue.innerText = osob;
+        newTrue.classList.add("osoba_dop")
+        before.appendChild(newTrue);
+        before.insertBefore(newTrue, before.firstChild);
+    }
+
+
+if( i>=0 && i<=64){
+    osoby("je",osoba1)
+    osoby("nous",osoba2)
+    osoby("tu",osoba3)
+    osoby("vous",osoba4)
+    osoby("il",osoba5)
+    osoby("ils",osoba6)
+}
+if( i>64 && i<=78){
+    osoby("j'",osoba1)
+    osoby("nous",osoba2)
+    osoby("tu",osoba3)
+    osoby("vous",osoba4)
+    osoby("il",osoba5)
+    osoby("ils",osoba6)
+}
+if(i>78 && i<=81 ){
+    osoby("je",osoba1)
+    osoby("nous",osoba2)
+    osoby("tu",osoba3)
+    osoby("vous",osoba4)
+    osoby("il",osoba5)
+    osoby("ils",osoba6)
+}
+
+
+
+
+
+
+
+
+
     btn_bez_spr.addEventListener('click', function () {
 
 
-        console.log(czasowniki[i][1]);
+
         if (capitalize(inp_tlu.value) === czasowniki[i][1]) {
             div_tlu.removeChild(div_tlu.lastChild);
             var newTrue = document.createElement(`p`);
@@ -249,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function () {
             div_22.removeChild(div_22.lastChild);
             let newTrue = document.createElement(`p`);
             newTrue.innerText = "dobre tłumaczenie";
-            newTrue.classList.add("dobre_tlu")
+            newTrue.classList.add("dobre_tlu");
             div_22.appendChild(newTrue);
         } else {
             div_22.removeChild(div_22.lastChild);
@@ -275,7 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     pop.addEventListener('click',function () {
-console.log(czasowniki[i][1]);
+
         // div_tlu.removeChild(div_tlu.lastChild);
         //     var newTrue = document.createElement(`p`);
         //     newTrue.innerText = czasowniki[i][1];
@@ -285,6 +356,7 @@ console.log(czasowniki[i][1]);
 
             div_tlu.removeChild(div_tlu.lastChild);
             var newOption = document.createElement(`p`);
+            newOption.classList.add("pop_tlu");
             newOption.innerText = czasowniki[i][1];
             div_tlu.appendChild(newOption);
             }
@@ -297,6 +369,8 @@ console.log(czasowniki[i][1]);
 
             div_1.removeChild(div_1.lastChild);
             let newTrue = document.createElement(`p`);
+            newTrue.classList.add("pop_tlu");
+
             newTrue.innerText = czasowniki[i][2];
             div_1.appendChild(newTrue);
         }
@@ -306,6 +380,8 @@ console.log(czasowniki[i][1]);
 
             div_2.removeChild(div_2.lastChild);
             let newTrue = document.createElement(`p`);
+            newTrue.classList.add("pop_tlu");
+
             newTrue.innerText = czasowniki[i][3];
             div_2.appendChild(newTrue);
         }
@@ -314,6 +390,8 @@ console.log(czasowniki[i][1]);
 
             div_3.removeChild(div_3.lastChild);
             let newTrue = document.createElement(`p`);
+            newTrue.classList.add("pop_tlu");;
+
             newTrue.innerText = czasowniki[i][4];
             div_3.appendChild(newTrue);
         }
@@ -322,6 +400,8 @@ console.log(czasowniki[i][1]);
 
             div_21.removeChild(div_21.lastChild);
             let newTrue = document.createElement(`p`);
+            newTrue.classList.add("pop_tlu");
+
             newTrue.innerText = czasowniki[i][5];
             div_21.appendChild(newTrue);
         }
@@ -330,6 +410,8 @@ console.log(czasowniki[i][1]);
 
             div_22.removeChild(div_22.lastChild);
             let newTrue = document.createElement(`p`);
+            newTrue.classList.add("pop_tlu");
+
             newTrue.innerText = czasowniki[i][6];
             div_22.appendChild(newTrue);
         }
@@ -338,6 +420,8 @@ console.log(czasowniki[i][1]);
 
             div_23.removeChild(div_23.lastChild);
             let newTrue = document.createElement(`p`);
+            newTrue.classList.add("pop_tlu");
+
             newTrue.innerText = czasowniki[i][7];
             div_23.appendChild(newTrue);
         }

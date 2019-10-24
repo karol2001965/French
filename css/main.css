@@ -53,7 +53,6 @@ b {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 37%;
 }
 
 .pierwszy_rzad, .drugi_rzad, .trzeci_rzad, .czwarty_rzad {
@@ -90,8 +89,10 @@ h2 {
 }
 
 input {
-  width: 8rem;
+  width: 7rem;
   margin-top: 1rem;
+  display: inline;
+  border-radius: 5px;
 }
 
 button {
@@ -114,6 +115,49 @@ button {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
+}
+
+.osoba5, .osoba4, .osoba6, .osoba2, .osoba1, .osoba3 {
+  display: inline;
+}
+
+.osoba_dop {
+  display: inline;
+}
+
+@media (min-width: 768px) {
+  .pierwszy_rzad, .drugi_rzad, .trzeci_rzad, .czwarty_rzad {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 9vh;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+  .dobre_tlu {
+    font-size: 17px;
+  }
+  .zle_tlu {
+    font-size: 17px;
+  }
+  .pop_tlu {
+    font-size: 20px;
+  }
+  .osoba {
+    display: inline;
+  }
+  .osoba_dop {
+    display: inline;
+  }
+  input {
+    height: 1.5rem;
+    width: 8rem;
+    border-radius: 5px;
+    display: inline;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
